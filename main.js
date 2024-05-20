@@ -1,6 +1,6 @@
 function tocaSom(idElementoAudio) { // Função para reproduzir som
     document.querySelector(idElementoAudio).play(); // Reproduz o som do elemento de áudio com o ID especificado
-  }
+}
   
   const listaDeTeclas = document.querySelectorAll('.tecla'); // Obtém uma lista de todos os elementos com a classe 'tecla'
   
@@ -14,5 +14,17 @@ function tocaSom(idElementoAudio) { // Função para reproduzir som
     tecla.onclick = function() {
       tocaSom(idAudio); // Chama a função tocaSom com o ID do elemento de áudio do instrumento atual
     };
-  }
+
+    tecla.onkeydown = function (evento) {
+        if ('space') {
+        tecla.classList.add('ativa');
+        }
+    }
+
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
+
+
+}
   
