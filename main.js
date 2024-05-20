@@ -16,7 +16,7 @@ function tocaSom(idElementoAudio) { // Função para reproduzir som
     };
 
     tecla.onkeydown = function (evento) {
-        if ('space') {
+        if (evento.code = 'Space') {
         tecla.classList.add('ativa');
         }
     }
